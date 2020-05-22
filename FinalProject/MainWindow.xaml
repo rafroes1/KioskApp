@@ -1,0 +1,42 @@
+﻿<Window x:Class="FinalProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FinalProject"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="Kiosk" HorizontalAlignment="Left" Margin="371,10,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <Label Content="Select an Item:" HorizontalAlignment="Left" Margin="30,68,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="150"/>
+        <ComboBox x:Name="selectItemComboBox" HorizontalAlignment="Left" Margin="30,99,0,0" VerticalAlignment="Top" Width="150" SelectionChanged="ComboBox_SelectionChanged">
+            <ComboBoxItem>Tires</ComboBoxItem>
+            <ComboBoxItem>Windshield Wipers</ComboBoxItem>
+            <ComboBoxItem>Batteries</ComboBoxItem>
+        </ComboBox>
+        <Label Content="Item Name:" HorizontalAlignment="Left" Margin="30,147,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold"/>
+        <TextBox x:Name="itemNameTxtField" HorizontalAlignment="Left" Height="23" Margin="30,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150"/>
+        <Label x:Name="customLbl" Content="Custom Label" HorizontalAlignment="Left" Margin="213,68,0,0" VerticalAlignment="Top" FontWeight="Bold" Width="150"/>
+        <TextBox x:Name="customTxtField" HorizontalAlignment="Left" Height="23" Margin="213,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" PreviewTextInput="NumberValidationTextBox"/>
+        <TextBox x:Name="modelTxtField" HorizontalAlignment="Left" Height="23" Margin="213,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="150
+                 "/>
+        <Label x:Name="modelLbl" Content="Tire Model:" HorizontalAlignment="Left" Margin="213,147,0,0" VerticalAlignment="Top" Width="150" FontWeight="Bold"/>
+        <CheckBox x:Name="shippingCheckBox" Content="Ship this item" HorizontalAlignment="Left" Margin="213,127,0,0" VerticalAlignment="Top"/>
+        <Button Content="Submit Order" HorizontalAlignment="Left" Margin="30,220,0,0" VerticalAlignment="Top" Width="150" Click="Submit_Button_Click" Height="23"/>
+        <Label Content="Order History" HorizontalAlignment="Left" Margin="556,68,0,0" VerticalAlignment="Top" Width="90" FontWeight="Bold"/>
+
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="257" Margin="433,99,0,0" VerticalAlignment="Top" Width="330">
+            <ScrollViewer>
+                <TextBlock x:Name="orderHistoryTxtBlock" TextWrapping="Wrap" FontSize="10" IsEnabled="False" Margin="-0.8,0.2,-1.2,-1"/>
+            </ScrollViewer>
+        </Border>
+        <Button Content="LinQ Search" HorizontalAlignment="Left" Margin="122,369,0,0" VerticalAlignment="Top" Width="150" Click="LinQ_Button_Click" Height="23"/>
+        <Border x:Name="linqBorder" BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="85" Margin="30,271,0,0" VerticalAlignment="Top" Width="333"/>
+        <TextBlock x:Name="linqSearchTxtBlock" HorizontalAlignment="Left" Margin="30,271,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="85" Width="333" IsEnabled="False"/>
+        <Button Content="Save Order History" HorizontalAlignment="Left" Margin="433,369,0,0" VerticalAlignment="Top" Width="150" Click="Save_Button_Click" Height="23"/>
+        <Button Content="Load Order History" HorizontalAlignment="Left" Margin="613,369,0,0" VerticalAlignment="Top" Width="150" Click="Load_Button_Click" Height="23"/>
+        <Label Content="Total:" HorizontalAlignment="Left" Margin="213,220,0,0" VerticalAlignment="Top" Height="23" FontWeight="Bold"/>
+        <Label x:Name="totalLabel" Content="$0" HorizontalAlignment="Left" Margin="255,220,0,0" VerticalAlignment="Top" Height="23" Width="98"/>
+
+    </Grid>
+</Window>
